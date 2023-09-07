@@ -11,28 +11,38 @@ function form({ formHeading, buttonText, p1, link, p2 }) {
   const placeholder2 = "your email";
   const textAreaPlaceholder = "password";
   return (
-    <div className="w-11/12 md:h-screen flex flex-col justify-center items-center text-center p-4 align-middle">
-      <div className="bg-transparent py-12 flex flex-col justify-center items-center">
-        <img src="./../assets/sabric-logo.png" alt="sabric logo" />
+    <div className="w-11/12 md:w-9/12 md:min-h-screen flex flex-col justify-center lg:justify-start lg:items-start lg:text-start items-center text-center p-4 align-middle lg:w-full lg:flex-row lg:gap-6 lg:p-0">
+      <div
+        className="w-0 lg:w-2/5 lg:overflow-y-auto lg:min-h-screen lg:bg-cover lg:bg-center lg:bg-repeat-y lg:bg-scroll"
+        style={{
+          backgroundImage: `url('./../assets/lg-bg-img.png')`,
+        }}
+      >
+        <img src="./../assets/lg-bg-img.png'" alt=""/>
       </div>
-      <div className="flex flex-col gap-3 mb-12">
-        <h1 className="font-bold flex-auto capitalize text-black text-4xl py-2">
-          {formHeading}
-        </h1>
-        <p className=" font-normal flex-auto text-black text-medium">
-          When, while lovely valley teems with vapour around atlas meant
-          meridian the upper impenetrable.
-        </p>
+      <div className="lg:w-3/5">
+        <div className="bg-transparent py-12 flex flex-col justify-center items-center lg:items-start lg:justify-start">
+          <img src="./assets/sabric-logo.png" alt="sabric logo" />
+        </div>
+        <div className="flex flex-col gap-3 mb-12 lg:items-start lg:justify-start lg:w-9/12">
+          <h1 className="font-bold flex-auto capitalize text-black text-4xl lg:text-5xl py-2">
+            {formHeading}
+          </h1>
+          <p className=" font-normal flex-auto text-black text-medium">
+            When, while lovely valley teems with vapour around atlas meant
+            meridian the upper impenetrable.
+          </p>
+        </div>
+
+        <form method="POST" action="#" className="flex flex-col gap-4 w-full">
+          <Input inputType={inputType1} inputPlaceholder={placeholder1} />
+          <Input inputType={inputType2} inputPlaceholder={placeholder2} />
+          <TextArea placeholder={textAreaPlaceholder} />
+          <Button buttonText={buttonText} />
+        </form>
+
+        <AlternateText p1={p1} link={link} p2={p2} />
       </div>
-
-      <form method="POST" action="#" className="flex flex-col gap-4 w-full">
-        <Input inputType={inputType1} inputPlaceholder={placeholder1} />
-        <Input inputType={inputType2} inputPlaceholder={placeholder2} />
-        <TextArea placeholder={textAreaPlaceholder} />
-        <Button buttonText={buttonText} />
-      </form>
-
-      <AlternateText p1={p1} link={link} p2={p2} />
     </div>
   );
 }
