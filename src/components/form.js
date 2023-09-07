@@ -10,18 +10,16 @@ function form({ formHeading, buttonText, p1, link, p2 }) {
   const placeholder1 = "your name";
   const placeholder2 = "your email";
   const textAreaPlaceholder = "password";
+  
   return (
     <div className="w-11/12 md:w-9/12 md:min-h-screen flex flex-col justify-center lg:justify-start lg:items-start lg:text-start items-center text-center p-4 align-middle lg:w-full lg:flex-row lg:gap-6 lg:p-0">
       <div
-        className="w-0 lg:w-2/5 lg:overflow-y-auto lg:min-h-screen lg:bg-cover lg:bg-center lg:bg-repeat-y lg:bg-scroll"
-        style={{
-          backgroundImage: `url('./../assets/lg-bg-img.png')`,
-        }}
+        className="w-0 lg:w-1/2 lg:min-h-screen bg-repeat-y lg:flex lg:flex-col flex-1 bg-[url]  bg-cover bg-center" style={{backgroundImage:`url("./assets/lg-bg-img.png")`}}
       >
-        <img src="./../assets/lg-bg-img.png'" alt=""/>
+        {/* <img src="" alt="" className="lg:w-full lg:h-full lg:min-h-screen bg-repeat-y object-cover object-center lg:flex-auto"/> */}
       </div>
-      <div className="lg:w-3/5">
-        <div className="bg-transparent py-12 flex flex-col justify-center items-center lg:items-start lg:justify-start">
+      <div className="lg:w-1/2">
+        <div className="bg-transparent py-12 flex flex-col justify-center items-center lg:items-start lg:justify-start lg:px-4">
           <img src="./assets/sabric-logo.png" alt="sabric logo" />
         </div>
         <div className="flex flex-col gap-3 mb-12 lg:items-start lg:justify-start lg:w-9/12">
