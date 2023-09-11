@@ -7,7 +7,7 @@ function signup() {
   const p1 = "Already a member?";
   const p2 = "sign in";
   const buttonText = "create account";
-  const linkTo = "/login.js";
+  const linkTo = "/login";
   return (
     <div className="w-full justify-center m-auto align-middle items-center text-center bg-gray-100 flex flex-col flex-grow">
       <Form
